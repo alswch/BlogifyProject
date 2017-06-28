@@ -2,25 +2,30 @@
 <html lang="en">
   <!-- ======= ======= ======= head ======= ======= ======= -->
 	<head>
-	    <link rel="stylesheet" type="text/css" href="blog_styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Comfortaa|Josefin+Sans" rel="stylesheet">
+	   <link rel="stylesheet" type="text/css" href="blog_styles.css">
+		 <link rel="icon" href="images/pencil.png">
+		 <title>Terriblog</title>
 	</head>
   <!-- ======= ======= ======= body ======= ======= ======= -->
 	<body>
 	    <!-- ======= header ======= -->
-	    <div id="header" class="section">
-	        <p>header</p>
+
 	    <!-- ======= menu ======= -->
 		<div id="menu-container" class="section">
 			<%= erb :menu %>
 		</div>
-	    </div>
+
 	    <!-- ======= content ======= -->
 		<div id="yield-container" class="section">
 			<%= yield %>
 		</div>
 	    <!-- ======= footer ======= -->
-	    <div id="footer" class="section">
-	        <p>footer</p>
+	    <div id="footer">
+	        <span id="footer-text">&copy; Terriblog 2017</span>
+					<a href="https://github.com/alswch/BlogifyProject" target="_blank">
+						<img id="github-icon" src="images/github.png" alt="Github">
+					</a>
 	    </div>
 	    <!-- ======= scripts ======= -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
