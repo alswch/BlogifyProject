@@ -1,0 +1,51 @@
+$logo-font: 'Comfortaa', cursive;
+$secondary-font: 'Josefin Sans', sans-serif;
+$shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+#menu-container{
+  box-sizing: border-box;
+  padding: 20px;
+  height: 80px;
+  width: 100%;
+  box-shadow: $shadow;
+  #logo-container{
+    float: left;
+    a{
+      text-decoration: none;
+      #logo-text{
+        margin: 0;
+        line-height: 40px;
+        font-size: 36px;
+        color: black;
+        font-family: $logo-font;
+      }
+    }
+  }
+  #navbar-items{
+    float: right;
+    a{
+      text-decoration: none;
+      text-align: center;
+      .nav-item{
+        box-sizing: border-box;
+        display: inline-block;
+        margin: 0 5px;
+        padding: 10px;
+        height: 40px;
+        width: 100px;
+        box-shadow: $shadow;
+        border-radius: 2px;
+        color: white;
+        font-size: 20px;
+        background-color: #3333ff;
+        font-family: $secondary-font;
+        &:hover{
+          background-color: #6666ff;
+        }
+        &:active{
+          background-color: #0000cc;
+        }
+      }
+    }
+  }
+}

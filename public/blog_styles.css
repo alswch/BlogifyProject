@@ -1,75 +1,113 @@
-body {
-  margin: 0;
-}
-#menu-container{
+#menu-container {
   box-sizing: border-box;
   padding: 20px;
   height: 80px;
   width: 100%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-#logo-container{
-  float: left;
-}
-#logo-text{
-  margin: 0;
-  line-height: 40px;
-  font-size: 36px;
-  font-family: 'Comfortaa', cursive;
-}
-#navbar-items{
-  float: right;
-}
-a{
-  text-decoration: none;
-  text-align: center;
-}
-.nav-item{
-  box-sizing: border-box;
-  padding: 10px;
-  height: 40px;
-  width: 100px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  border-radius: 2px;
-  color: white;
-  font-size: 20px;
-  background-color: #3333ff;
-  font-family: 'Josefin Sans', sans-serif;
-}
-.nav-item:hover{
-  background-color: #6666ff;
-}
-.nav-item:active{
-  background-color: #0000cc;
-}
-#footer{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+  #menu-container #logo-container {
+    float: left; }
+    #menu-container #logo-container a {
+      text-decoration: none; }
+      #menu-container #logo-container a #logo-text {
+        margin: 0;
+        line-height: 40px;
+        font-size: 36px;
+        color: black;
+        font-family: "Comfortaa", cursive; }
+  #menu-container #navbar-items {
+    float: right; }
+    #menu-container #navbar-items a {
+      text-decoration: none;
+      text-align: center; }
+      #menu-container #navbar-items a .nav-item {
+        box-sizing: border-box;
+        display: inline-block;
+        margin: 0 5px;
+        padding: 10px;
+        height: 40px;
+        width: 100px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 2px;
+        color: white;
+        font-size: 20px;
+        background-color: #3333ff;
+        font-family: "Josefin Sans", sans-serif; }
+        #menu-container #navbar-items a .nav-item:hover {
+          background-color: #6666ff; }
+        #menu-container #navbar-items a .nav-item:active {
+          background-color: #0000cc; }
+
+#footer {
   position: fixed;
   bottom: 0;
   box-sizing: border-box;
   height: 60px;
   width: 100%;
   text-align: center;
-  background-color: #3333ff;
-}
-#footer-text{
-  float: left;
-  display: inline-block;
-  margin: 0 20px;
-  line-height: 60px;
-  font-size: 20px;
-  font-family: 'Josefin Sans', sans-serif;
-  color: white;
-}
-#github-icon{
-  float: right;
-  /*box-sizing: border-box;*/
-  margin-right: 20px;
-  display: inline-block;
-  padding: 10px 10px;
-  height: 40px;
-  border-radius: 50%;
-}
+  background-color: #3333ff; }
+  #footer #footer-text {
+    float: left;
+    display: inline-block;
+    margin: 0 20px;
+    line-height: 60px;
+    font-size: 20px;
+    font-family: "Comfortaa", cursive;
+    color: white; }
+  #footer #github-icon {
+    float: right;
+    /*box-sizing: border-box;*/
+    margin-right: 20px;
+    display: inline-block;
+    padding: 10px 10px;
+    height: 40px;
+    border-radius: 50%; }
+    #footer #github-icon:active {
+      background-color: #0000cc; }
 
-#github-icon:active{
-  background-color: #0000cc;
-}
+#form-container {
+  box-sizing: border-box;
+  padding: 20px;
+  height: auto;
+  width: 300px;
+  margin: auto;
+  text-align: center; }
+  #form-container .signin-item {
+    box-sizing: border-box;
+    margin: 5px;
+    height: 50px;
+    width: 250px;
+    border: none;
+    font-size: 26px;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center; }
+  #form-container .input-box {
+    border-bottom: 1px solid black;
+    outline: none;
+    padding: 0; }
+  #form-container #signin-submit-btn {
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 2px;
+    background-color: #3333ff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    cursor: pointer; }
+    #form-container #signin-submit-btn:hover {
+      background-color: #6666ff; }
+    #form-container #signin-submit-btn:active {
+      background-color: #0000cc; }
+  #form-container #register-div {
+    float: right;
+    padding: 5px; }
+    #form-container #register-div #register-text {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 16px;
+      text-decoration: none;
+      color: black; }
+      #form-container #register-div #register-text:hover {
+        text-decoration: underline; }
+
+body {
+  margin: 0; }
+
+/*# sourceMappingURL=blog_styles.css.map */

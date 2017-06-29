@@ -1,0 +1,32 @@
+$footer-font: 'Comfortaa', cursive;
+
+#footer{
+  position: fixed;
+  bottom: 0;
+  box-sizing: border-box;
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  background-color: #3333ff;
+  #footer-text{
+    float: left;
+    display: inline-block;
+    margin: 0 20px;
+    line-height: 60px;
+    font-size: 20px;
+    font-family: $footer-font;
+    color: white;
+  }
+  #github-icon{
+    float: right;
+    /*box-sizing: border-box;*/
+    margin-right: 20px;
+    display: inline-block;
+    padding: 10px 10px;
+    height: 40px;
+    border-radius: 50%;
+    &:active{
+      background-color: #0000cc;
+    }
+  }
+}
