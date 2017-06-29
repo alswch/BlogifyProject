@@ -1,0 +1,45 @@
+$font-size: 26px;
+$secondary-font: 'Josefin Sans', sans-serif;
+$button-color: #3333ff;
+$btn-hover-color: #6666ff;
+$btn-active-color: #0000cc;
+$shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+#register-container{
+  box-sizing: border-box;
+  padding: 20px;
+  height: auto;
+  width: 300px;
+  margin: auto;
+  text-align: center;
+  .register-item{
+    box-sizing: border-box;
+    margin: 5px;
+    height: 50px;
+    width: 250px;
+    border: none;
+    font-size: $font-size;
+    font-family: $secondary-font;
+    text-align: center;
+  }
+  .input-box{
+    border-bottom: 1px solid black;
+    outline: none;
+    padding: 0;
+  }
+  #register-submit-btn{
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 2px;
+    background-color: $button-color;
+    box-shadow: $shadow;
+    color: white;
+    cursor: pointer;
+    &:hover{
+      background-color: $btn-hover-color;
+    }
+    &:active{
+      background-color: $btn-active-color;
+    }
+  }
+}
