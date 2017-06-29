@@ -23,6 +23,9 @@
     <input type="text" name="email" value="<%= @current_user.email %>">
   </div>
 
-  <input type="hidden" name="user_id" value="<%= @current_user.id %>">
+  <input type="hidden" name="user_id" id="current_user_id" value="<%= @current_user.id %>">
+
   <input type="submit" value="Update">
 </form>
+
+<input type="button" id="deleteBtn" value="Delete">

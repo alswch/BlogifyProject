@@ -15,6 +15,11 @@ get '/' do
 	puts "\n******* home *******"
 	erb :home
 end
+get '/home' do
+	puts "\n******* home *******"
+	erb :home
+end
+
 
 # ======= ======= USER: PROFILE PAGE ======= ========
 get '/user_profile' do
@@ -54,7 +59,7 @@ post '/signin' do
 			session[:user_id] = @user.id
             @current_user = get_current_user
 			flash[:notice] = "You've been signed in successfully."
-			redirect '/user_profile'
+			redirect '/user_profile' #need to redirect to feed page
 		else
 			flash[:notice] = "Please check your password and try again."
 			redirect "/signin"
@@ -98,4 +103,11 @@ post '/user_update' do
   @user.update(username: params[:username], password: params[:password], firstname: params[:firstname], lastname: params[:lastname], email: params[:email])
   flash[:notice] = "Successfully updated your profile."
   redirect '/user_profile'
+end
+
+# ======= USER: DELETE ACCOUNT =======
+get '/deleteuser' do
+  puts "\n****** delete user *******"
+  User.find(session[:user_id]).destroy
+  erb :home
 end
