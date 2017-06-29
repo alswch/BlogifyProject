@@ -43,7 +43,7 @@ post '/user_form' do
     email: params[:email]
   )
   @user = User.order("created_at").last
-  redirect '/blog_feed'
+  redirect '/signin'
 end
 
 # ======= ======= USER: SIGN IN ======= ========
@@ -135,3 +135,5 @@ post '/create_new_post' do
   @post = Post.order("created_at").last
   redirect '/blog_feed'
 end
+
+# ======= ======= BLOG: ADD COMMENT ======= =======
