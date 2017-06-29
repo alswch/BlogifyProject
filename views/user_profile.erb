@@ -1,0 +1,9 @@
+<!-- views/user_profile.erb -->
+<h1>User Profile page</h1>
+
+<% if flash[:notice] %>
+        <h2><%= flash[:notice] %></h2>
+<%end%>
+
+<!-- temporary link to user update page -->
+<a href="user_update">Update account</a>

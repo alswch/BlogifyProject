@@ -16,12 +16,17 @@ get '/' do
 	erb :home
 end
 
-# ======= ======= USER REGISTER ======= ========
+# ======= ======= USER: PROFILE PAGE ======= ========
+get '/user_profile' do
+  puts "\n****** user profile ******"
+  erb :user_profile
+end
+
+# ======= ======= USER: REGISTER ======= ========
 get '/register' do
   puts "\n******* register *******"
   erb :register
 end
-
 post '/user_form' do
   puts "\n****** new user ******"
   puts "params: #{params.inspect}"
@@ -36,12 +41,11 @@ post '/user_form' do
   redirect '/'
 end
 
-# ======= ======= USER SIGN IN ======= ========
+# ======= ======= USER: SIGN IN ======= ========
 get '/signin' do
   puts "\n******* signin *******"
   erb :signin
 end
-
 post '/signin' do
 	puts "\n******* signin *******"
     @user = User.where(username: params[:username]).first
@@ -50,7 +54,7 @@ post '/signin' do
 			session[:user_id] = @user.id
             @current_user = get_current_user
 			flash[:notice] = "You've been signed in successfully."
-			redirect '/'
+			redirect '/user_profile'
 		else
 			flash[:notice] = "Please check your password and try again."
 			redirect "/signin"
@@ -61,7 +65,7 @@ post '/signin' do
 	end
 end
 
-# ====== SIGN OUT =======
+# ====== USER: SIGN OUT =======
 get '/signout' do
   puts "\n****** logout ******"
   @user = nil
@@ -69,7 +73,7 @@ get '/signout' do
   redirect '/'
 end
 
-# ======= get_current_user =======
+# ======= GET CURRENT USER =======
 def get_current_user
     # puts "\n******* get_current_user *******"
     if session[:user_id]
@@ -77,4 +81,21 @@ def get_current_user
     else
         puts "** NO CURRENT USER **"
     end
+end
+
+# ======= USER: UPDATE ACCOUNT =======
+get '/user_update' do
+  puts "\n****** user update ******"
+  puts "params: #{params.inspect}"
+  @current_user = get_current_user
+  erb :user_update
+end
+
+post '/user_update' do
+  puts "\n****** user update *******"
+  puts "params: #{params.inspect}"
+  @user = User.find(params[:user_id])
+  @user.update(username: params[:username], password: params[:password], firstname: params[:firstname], lastname: params[:lastname], email: params[:email])
+  flash[:notice] = "Successfully updated your profile."
+  redirect '/user_profile'
 end
