@@ -1,2 +1,21 @@
 <!-- ======= views/signin.erb ======= -->
 <h1>signin page</h1>
+
+<% if flash[:notice] %>
+    <div class="flash_notice">
+        <%= flash[:notice] %>
+    </div>
+<%end%>
+
+<!-- username/ password -->
+<form id='users-data' action="/signin" method="post">
+  <div>
+    <label for="username">Username</label>
+    <input type="text" name="username" value="abc">
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input type="text" name="password" value="1234">
+  </div>
+  <input type="submit" value="Sign in">
+</form>
