@@ -26,6 +26,7 @@
   <input type="hidden" name="user_id" id="current_user_id" value="<%= @current_user.id %>">
 
   <input type="submit" value="Update">
+  <a href="/deleteuser/<%= @current_user.id %>">Delete</a>
 </form>
 
-<input type="button" id="deleteBtn" value="Delete">
+<!-- <input type="button" id="deleteBtn" value="Delete"> -->

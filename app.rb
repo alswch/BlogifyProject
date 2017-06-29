@@ -73,7 +73,7 @@ end
 # ====== USER: SIGN OUT =======
 get '/signout' do
   puts "\n****** logout ******"
-  @user = nil
+  session[:user_id] = nil
   flash[:notice] = "You've sucessfully logged out"
   redirect '/'
 end
@@ -106,8 +106,8 @@ post '/user_update' do
 end
 
 # ======= USER: DELETE ACCOUNT =======
-get '/deleteuser' do
+get '/deleteuser/:id' do
   puts "\n****** delete user *******"
   User.find(session[:user_id]).destroy
-  erb :home
+  redirect '/'
 end
