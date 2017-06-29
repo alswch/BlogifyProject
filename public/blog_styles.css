@@ -26,6 +26,8 @@ a{
 }
 .nav-item{
   box-sizing: border-box;
+  display: inline-block;
+  margin: 0 5px;
   padding: 10px;
   height: 40px;
   width: 100px;
