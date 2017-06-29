@@ -1,34 +1,30 @@
 <!-- ======= views/user_update.erb ======= -->
-<!-- username, password, firstname, lastname, email -->
 
-<h1>User Update page</h1>
-
-<form id='user_update-data' action="/user_update" method="post">
+<div id="form-container">
+<form id="user_update-data" action="/user_update" method="post">
   <div>
-    <label for="username">Username</label>
-    <input type="text" name="username" value="<%= @current_user.username %>">
+    <input class="input-item input-box" type="text" name="username" value="<%= @current_user.username %>">
   </div>
   <div>
-    <label for="password">Password</label>
-    <input type="text" name="password" value="<%= @current_user.password %>">
+    <input class="input-item input-box" type="text" name="password" value="<%= @current_user.password %>">
   </div>
   <div>
-    <label for="firstname">First Name</label>
-    <input type="text" name="firstname" value="<%= @current_user.firstname %>">
+    <input class="input-item input-box" type="text" name="firstname" value="<%= @current_user.firstname %>">
   </div>
   <div>
-    <label for="lastname">Last Name</label>
-    <input type="text" name="lastname" value="<%= @current_user.lastname %>">
+    <input class="input-item input-box" type="text" name="lastname" value="<%= @current_user.lastname %>">
   </div>
   <div>
-    <label for="email">Email</label>
-    <input type="text" name="email" value="<%= @current_user.email %>">
+    <input class="input-item input-box" type="text" name="email" value="<%= @current_user.email %>">
   </div>
-
   <input type="hidden" name="user_id" id="current_user_id" value="<%= @current_user.id %>">
 
-  <input type="submit" value="Update">
-  <a href="/deleteuser/<%= @current_user.id %>">Delete</a>
+  <input class="input-item submit-btn" type="submit" value="Update">
+
+  <div class="delete-btn input-item">
+    <a id="delete-txt" href="/deleteuser/<%= @current_user.id %>">Delete</a>
+  </div>
 </form>
+</div>
 
 <!-- <input type="button" id="deleteBtn" value="Delete"> -->
