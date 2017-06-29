@@ -21,9 +21,10 @@
 
   <input class="input-item submit-btn" type="submit" value="Update">
 
-  <div class="delete-btn input-item">
-    <a id="delete-txt" href="/deleteuser/<%= @current_user.id %>">Delete</a>
-  </div>
+  <a href="/deleteuser/<%= @current_user.id %>">
+    <div class="delete-btn input-item">Delete</div>
+  </a>
+
 </form>
 </div>
 

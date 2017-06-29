@@ -46,21 +46,21 @@ $delete-btn-active: #e60000;
       background-color: $btn-active-color;
     }
   }
-  .delete-btn{
-    @extend .submit-btn;
-    margin-top: 5px;
-    background-color: $delete-btn;
-    &:hover{
-      background-color: $delete-btn-hover;
+  a{text-decoration: none;
+    .delete-btn{
+      @extend .submit-btn;
+      margin-top: 5px;
+      background-color: $delete-btn;
+      &:hover{
+        background-color: $delete-btn-hover;
+      }
+      &:active{
+        background-color: $delete-btn-active;
+      }
+      #delete-txt{
+        color: white;
+      }
     }
-    &:active{
-      background-color: $delete-btn-active;
-    }
-    #delete-txt{
-      text-decoration: none;
-      color: white;
-    }
-
   }
   #register-div{
     float: right;

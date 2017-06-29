@@ -109,6 +109,7 @@ end
 get '/deleteuser/:id' do
   puts "\n****** delete user *******"
   User.find(session[:user_id]).destroy
+	session[:user_id] = nil
   redirect '/'
 end
 
