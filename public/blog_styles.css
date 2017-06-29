@@ -107,6 +107,39 @@
       #form-container #register-div #register-text:hover {
         text-decoration: underline; }
 
+#register-container {
+  box-sizing: border-box;
+  padding: 20px;
+  height: auto;
+  width: 300px;
+  margin: auto;
+  text-align: center; }
+  #register-container .register-item {
+    box-sizing: border-box;
+    margin: 5px;
+    height: 50px;
+    width: 250px;
+    border: none;
+    font-size: 26px;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center; }
+  #register-container .input-box {
+    border-bottom: 1px solid black;
+    outline: none;
+    padding: 0; }
+  #register-container #register-submit-btn {
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 2px;
+    background-color: #3333ff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    cursor: pointer; }
+    #register-container #register-submit-btn:hover {
+      background-color: #6666ff; }
+    #register-container #register-submit-btn:active {
+      background-color: #0000cc; }
+
 body {
   margin: 0; }
 
