@@ -43,7 +43,7 @@ post '/user_form' do
     email: params[:email]
   )
   @user = User.order("created_at").last
-  redirect '/'
+  redirect '/blog_feed'
 end
 
 # ======= ======= USER: SIGN IN ======= ========
@@ -59,7 +59,7 @@ post '/signin' do
 			session[:user_id] = @user.id
             @current_user = get_current_user
 			flash[:notice] = "You've been signed in successfully."
-			redirect '/user_profile' #need to redirect to feed page
+			redirect '/blog_feed'
 		else
 			flash[:notice] = "Please check your password and try again."
 			redirect "/signin"
@@ -110,4 +110,28 @@ get '/deleteuser/:id' do
   puts "\n****** delete user *******"
   User.find(session[:user_id]).destroy
   redirect '/'
+end
+
+# ======= ======= ======= BLOG: POSTS ======= ======= =======
+# ======= ======= BLOG: FEED PAGE ======= =======
+get '/blog_feed' do
+  puts "\n******* blog feed page *******"
+  erb :blog_feed
+end
+
+# ======= ======= BLOG: CREATE NEW POST ======= =======
+get '/new_post' do
+  puts "\n******* new post *******"
+  erb :new_post
+end
+post '/create_new_post' do
+  puts "\n******* create new post *******"
+  puts "params: #{params.inspect}"
+  Post.create(
+    title: params[:title],
+    content: params[:content],
+    user_id: session[:user_id]
+  )
+  @post = Post.order("created_at").last
+  redirect '/blog_feed'
 end
