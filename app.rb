@@ -147,7 +147,7 @@ end
 post '/add_comment' do
   puts "\n******* add new comment *******"
   Comment.create(
-  text: params[:text]
+  text: params[:text],
   user_id: session[:user_id]
   )
   redirect '/blog_feed'
