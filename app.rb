@@ -119,7 +119,8 @@ get '/blog_feed' do
   puts "\n******* blog feed page *******"
   @posts = Post.all.order(created_at: :desc)
   @users = User.all
-  @comments = Comment.all
+  # @comments = Comment.all
+  puts "****** comments: #{@comments.inspect}"
   # @user = Post.find(params[:user_id]])
 	# @name = @user.username
   # puts "****** username: #{@name}"
@@ -149,7 +150,8 @@ post '/add_comment' do
   Comment.create(
   text: params[:text],
   user_id: session[:user_id],
-  # post_id: params[:post_id]
+  post_id: params[:post_id]
   )
+  @comment = Comment.order("created_at").last
   redirect '/blog_feed'
 end
