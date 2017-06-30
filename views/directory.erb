@@ -1,0 +1,11 @@
+<!-- ======= views/directory.erb ======= -->
+<h1>Directory</h1>
+
+<% puts "\n******* do loop (each_with_index) *******" %>
+<div id="users_list">
+    <% @users.each_with_index do |user, index| %>
+        <% puts "** user/index: #{user}: #{index}" %>
+        <!-- <p> <%= user[:username] %> </p> -->
+        <p> <a href="/user_profile/<%= user[:id] %>"> <%= user[:username] %> </a></p>
+    <%end%>
+</div>

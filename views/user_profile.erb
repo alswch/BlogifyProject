@@ -4,3 +4,10 @@
 <% if flash[:notice] %>
         <h2><%= flash[:notice] %></h2>
 <%end%>
+
+<div id="account_details">
+    <p>Account Details</p>
+    <p> Userame: <%= @user[:username] %> </p>
+    <p> First Name: <%= @user[:firstname] %> </p>
+    <p> Last Name: <%= @user[:lastname] %> </p>
+</div>
