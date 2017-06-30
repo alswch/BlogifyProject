@@ -6,6 +6,8 @@
 <div id="navbar-items">
 
   <% if session[:user_id] %>
+    <a href="/blog_feed"><div class="nav-item">blog feed</div></a>
+    <a href="/new_post"><div class="nav-item">new post</div></a>
     <a href="/user_update"><div class="nav-item">edit profile</div></a>
     <a href="/signout"><div class="nav-item">sign out</div></a>
   <% else %>

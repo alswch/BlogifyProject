@@ -118,6 +118,84 @@
       #form-container #register-div #register-text:hover {
         text-decoration: underline; }
 
+.post-container {
+  box-sizing: border-box;
+  padding: 20px;
+  height: auto;
+  width: 700px;
+  margin: auto;
+  text-align: center; }
+  .post-container #create-post-header {
+    margin: 0;
+    font-family: "Oregano", cursive;
+    font-style: italic; }
+  .post-container .title-input-item {
+    box-sizing: border-box;
+    margin: 5px;
+    height: 50px;
+    width: 400px;
+    border: none;
+    font-size: 26px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center; }
+  .post-container .input-box {
+    border-bottom: 1px solid black;
+    outline: none;
+    padding: 0; }
+  .post-container .post-input-item {
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 5px;
+    height: 150px;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 26px;
+    font-family: "Open Sans", sans-serif;
+    outline: none;
+    resize: none; }
+  .post-container .input-item {
+    box-sizing: border-box;
+    margin: 5px;
+    height: 50px;
+    width: 250px;
+    border: none;
+    font-size: 26px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center; }
+  .post-container .post-submit-btn {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 2px;
+    background-color: #3333ff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: "Josefin Sans", sans-serif;
+    color: white;
+    cursor: pointer; }
+    .post-container .post-submit-btn:hover {
+      background-color: #6666ff; }
+    .post-container .post-submit-btn:active {
+      background-color: #0000cc; }
+  .post-container .single-post-container {
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px; }
+    .post-container .single-post-container .post-title {
+      border: 1px solid black;
+      float: left; }
+      .post-container .single-post-container .post-title .title-text {
+        margin: 0; }
+    .post-container .single-post-container .post-content {
+      border: 1px solid black;
+      clear: left; }
+    .post-container .single-post-container .author-date {
+      border: 1px solid black;
+      display: inline-block;
+      float: right; }
+    .post-container .single-post-container .post-username {
+      border: 1px solid black; }
+
 body {
   margin: 0; }
 

@@ -1,13 +1,14 @@
 <!-- view/new_post.erb -->
 <!-- user_id, comment_id, title, content, created_at -->
-<h1>Create New Post</h1>
-
-<form class="" action="create_new_post" method="post">
-<div>
-  <input type="text" name="title" value="" placeholder="Title">
+<div class="post-container">
+  <h1 id="create-post-header">What's on your mind?</h1>
 </div>
-  <div>
-    <input type="text" name="content" value="" placeholder="Say something">
-  </div>
-  <input type="submit" value="Create">
-</form>
+
+<div class="post-container">
+  <form action="create_new_post" method="post">
+    <input class="title-input-item input-box" type="text" name="title" value="" placeholder="Title">
+      <!-- <input class="post-input-item post-input-box" type="text" name="content" maxlength="150" value="" placeholder="Say something"> -->
+    <textarea class="post-input-item post-input-box" type="text" name="content" maxlength="150" value="" placeholder="Say something" rows="20" cols="40"></textarea>
+    <input class="input-item post-submit-btn" type="submit" value="Post!">
+  </form>
+</div>
