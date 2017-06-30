@@ -117,6 +117,11 @@ end
 # ======= ======= BLOG: FEED PAGE ======= =======
 get '/blog_feed' do
   puts "\n******* blog feed page *******"
+  @posts = Post.all
+  @users = User.all
+  # @user = Post.find(params[:user_id]])
+	# @name = @user.username
+  # puts "****** username: #{@name}"
   erb :blog_feed
 end
 
