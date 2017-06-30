@@ -117,7 +117,7 @@ end
 # ======= ======= BLOG: FEED PAGE ======= =======
 get '/blog_feed' do
   puts "\n******* blog feed page *******"
-  @posts = Post.all
+  @posts = Post.all.order(created_at: :desc)
   @users = User.all
   # @user = Post.find(params[:user_id]])
 	# @name = @user.username
