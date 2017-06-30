@@ -3,7 +3,7 @@ $secondary-font: 'Josefin Sans', sans-serif;
 $post-font: 'Open Sans', sans-serif;
 $post-header-font: 'Oregano', cursive;
 
-#create-post-container{
+.post-container{
   box-sizing: border-box;
   padding: 20px;
   height: auto;
@@ -69,5 +69,29 @@ $post-header-font: 'Oregano', cursive;
       background-color: $btn-active-color;
     }
   }
-
+  .single-post-container{
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+    .post-title{
+      border: 1px solid black;
+      float: left;
+      .title-text{
+        margin: 0;
+      }
+    }
+    .post-content{
+      border: 1px solid black;
+      clear: left;
+    }
+    .author-date{
+      border: 1px solid black;
+      display: inline-block;
+      float: right;
+    }
+    .post-username{
+      border: 1px solid black;
+    }
+  }
 }
