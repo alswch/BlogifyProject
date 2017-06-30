@@ -1,0 +1,73 @@
+$font-size: 26px;
+$secondary-font: 'Josefin Sans', sans-serif;
+$post-font: 'Open Sans', sans-serif;
+$post-header-font: 'Oregano', cursive;
+
+#create-post-container{
+  box-sizing: border-box;
+  padding: 20px;
+  height: auto;
+  width: 700px;
+  margin: auto;
+  text-align: center;
+  #create-post-header{
+    margin: 0;
+    font-family: $post-header-font;
+    font-style: italic;
+  }
+  .title-input-item{
+    box-sizing: border-box;
+    margin: 5px;
+    height: 50px;
+    width: 400px;
+    border: none;
+    font-size: $font-size;
+    font-family: $post-font;
+    text-align: center;
+  }
+  .input-box{
+    border-bottom: 1px solid black;
+    outline: none;
+    padding: 0;
+  }
+  .post-input-item{
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 5px;
+    height: 150px;
+    border: none;
+    border-radius: 2px;
+    box-shadow: $shadow;
+    font-size: $font-size;
+    font-family: $post-font;
+    outline: none;
+    resize: none;
+  }
+  .input-item{
+    box-sizing: border-box;
+    margin: 5px;
+    height: 50px;
+    width: 250px;
+    border: none;
+    font-size: $font-size;
+    font-family: $post-font;
+    text-align: center;
+  }
+  .post-submit-btn{
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 2px;
+    background-color: $button-color;
+    box-shadow: $shadow;
+    font-family: $secondary-font;
+    color: white;
+    cursor: pointer;
+    &:hover{
+      background-color: $btn-hover-color;
+    }
+    &:active{
+      background-color: $btn-active-color;
+    }
+  }
+
+}

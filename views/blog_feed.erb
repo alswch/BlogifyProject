@@ -2,15 +2,17 @@
 <h1>Blog Feed page</h1>
 <a href="new_post">Create new post</a>
 
-<% @posts.each do |post| %>
+<div id="form-container">
+  <% @posts.each do |post| %>
     <div>
-        <div class="post-title"><p><%= post.title %></p></div>
-        <div class="post-title"><p><%= post.content %></p></div>
-        <div class="post-title"><p><%= post.created_at %></p></div>
-        <% @users.each do |user| %>
-          <% if post.user_id == user.id %>
-            <div class="post-title"><p><%= user.username %></p></div>
-          <% end %>
+      <div class="post-title"><p><%= post.title %></p></div>
+      <div class="post-title"><p><%= post.content %></p></div>
+      <div class="post-title"><p><%= post.created_at %></p></div>
+      <% @users.each do |user| %>
+        <% if post.user_id == user.id %>
+          <div class="post-title"><p><%= user.username %></p></div>
         <% end %>
-      </div>
+      <% end %>
+    </div>
   <% end %>
+</div>

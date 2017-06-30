@@ -118,6 +118,65 @@
       #form-container #register-div #register-text:hover {
         text-decoration: underline; }
 
+#create-post-container {
+  box-sizing: border-box;
+  padding: 20px;
+  height: auto;
+  width: 700px;
+  margin: auto;
+  text-align: center; }
+  #create-post-container #create-post-header {
+    margin: 0;
+    font-family: "Oregano", cursive;
+    font-style: italic; }
+  #create-post-container .title-input-item {
+    box-sizing: border-box;
+    margin: 5px;
+    height: 50px;
+    width: 400px;
+    border: none;
+    font-size: 26px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center; }
+  #create-post-container .input-box {
+    border-bottom: 1px solid black;
+    outline: none;
+    padding: 0; }
+  #create-post-container .post-input-item {
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 5px;
+    height: 150px;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 26px;
+    font-family: "Open Sans", sans-serif;
+    outline: none;
+    resize: none; }
+  #create-post-container .input-item {
+    box-sizing: border-box;
+    margin: 5px;
+    height: 50px;
+    width: 250px;
+    border: none;
+    font-size: 26px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center; }
+  #create-post-container .post-submit-btn {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 2px;
+    background-color: #3333ff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: "Josefin Sans", sans-serif;
+    color: white;
+    cursor: pointer; }
+    #create-post-container .post-submit-btn:hover {
+      background-color: #6666ff; }
+    #create-post-container .post-submit-btn:active {
+      background-color: #0000cc; }
+
 body {
   margin: 0; }
 
