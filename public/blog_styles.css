@@ -38,7 +38,7 @@
           background-color: #0000cc; }
 
 #footer {
-  position: relative;
+  position: fixed;
   bottom: 0;
   box-sizing: border-box;
   height: 60px;
@@ -192,6 +192,7 @@
         font-family: "Comfortaa", cursive; }
     .post-container .single-post-container .post-content {
       border: 1px solid #bfbfbf;
+      border-radius: 2px;
       clear: left;
       font-family: "Open Sans", sans-serif;
       text-align: left; }
@@ -229,5 +230,7 @@
 
 body {
   margin: 0; }
+  body #yield-container {
+    padding-bottom: 60px; }
 
 /*# sourceMappingURL=blog_styles.css.map */
