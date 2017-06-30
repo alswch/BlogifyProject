@@ -56,7 +56,7 @@ post '/signin' do
     @user = User.where(username: params[:username]).first
 	if @user
 		if @user.password == params[:password]
-			session[:user_id] = @user.id
+			  session[:user_id] = @user.id
         @current_user = get_current_user
 			flash[:notice] = "You've been signed in successfully."
 			redirect '/blog_feed'
@@ -148,7 +148,8 @@ post '/add_comment' do
   puts "\n******* add new comment *******"
   Comment.create(
   text: params[:text],
-  user_id: session[:user_id]
+  user_id: session[:user_id],
+  # post_id: params[:post_id]
   )
   redirect '/blog_feed'
 end

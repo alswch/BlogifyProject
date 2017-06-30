@@ -10,15 +10,16 @@
              <% if post.user_id == user.id %>
                <div class="post-title"><p><%= user.username %></p></div>
              <% end %>
-             <% @comments.each do |comment| %>
-               <% if comment.post_id == post.id %>
-                 <div class="post-title"><p><%= comment.text %></p></div>
-               <% end %>
-
+               <% @comments.each do |comment| %>
+                 <% if comment.post_id == post.id %>
+                   <div class="post-title"><p><%= comment.text %></p></div>
+                 <% end %>
+                <% end %>
            <% end %>
            <!-- add new comment box for each post -->
          <form class="" action="/add_comment" method="post">
            <input type="text" name="text" maxlength="150" placeholder="Write comment...">
+           <!-- <input type="hidden" name="post_id" id="current_post_id" value="<%= post.id %>"> -->
            <input type="submit" name="submit_comment" value="Submit">
          </form>
        </div>
