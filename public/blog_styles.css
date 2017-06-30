@@ -38,7 +38,7 @@
           background-color: #0000cc; }
 
 #footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   box-sizing: border-box;
   height: 60px;
@@ -177,24 +177,55 @@
     .post-container .post-submit-btn:active {
       background-color: #0000cc; }
   .post-container .single-post-container {
+    position: relative;
     box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     border: 1px solid black;
-    padding: 20px;
+    border-radius: 2px;
+    padding: 5px 10px;
     margin: 20px; }
     .post-container .single-post-container .post-title {
-      border: 1px solid black;
       float: left; }
       .post-container .single-post-container .post-title .title-text {
-        margin: 0; }
+        margin: 0;
+        padding: 5px;
+        font-family: "Comfortaa", cursive; }
     .post-container .single-post-container .post-content {
-      border: 1px solid black;
-      clear: left; }
+      border: 1px solid #bfbfbf;
+      clear: left;
+      font-family: "Open Sans", sans-serif;
+      text-align: left; }
+      .post-container .single-post-container .post-content .post-text {
+        margin: 10px; }
     .post-container .single-post-container .author-date {
-      border: 1px solid black;
       display: inline-block;
-      float: right; }
+      float: right;
+      padding: 5px;
+      font-family: "Josefin Sans", sans-serif; }
     .post-container .single-post-container .post-username {
       border: 1px solid black; }
+    .post-container .single-post-container .comment-btn-container {
+      height: 30px;
+      margin: 5px 0; }
+      .post-container .single-post-container .comment-btn-container .add-comment-btn {
+        box-sizing: border-box;
+        float: right;
+        height: 30px;
+        width: 130px;
+        border: 1px solid black;
+        border-radius: 2px;
+        background-color: #3333ff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        cursor: pointer; }
+        .post-container .single-post-container .comment-btn-container .add-comment-btn:hover {
+          background-color: #6666ff; }
+        .post-container .single-post-container .comment-btn-container .add-comment-btn:active {
+          background-color: #0000cc; }
+        .post-container .single-post-container .comment-btn-container .add-comment-btn .add-comment-btn-text {
+          margin: 0;
+          line-height: 30px;
+          color: white;
+          font-family: "Josefin Sans", sans-serif; }
 
 body {
   margin: 0; }

@@ -1,5 +1,4 @@
 $font-size: 26px;
-$secondary-font: 'Josefin Sans', sans-serif;
 $post-font: 'Open Sans', sans-serif;
 $post-header-font: 'Oregano', cursive;
 
@@ -70,28 +69,65 @@ $post-header-font: 'Oregano', cursive;
     }
   }
   .single-post-container{
+    position: relative;
     box-sizing: border-box;
+    box-shadow: $shadow;
     border: 1px solid black;
-    padding: 20px;
+    border-radius: 2px;
+    padding: 5px 10px;
     margin: 20px;
     .post-title{
-      border: 1px solid black;
       float: left;
       .title-text{
         margin: 0;
+        padding: 5px;
+        font-family: $logo-font;
       }
     }
     .post-content{
-      border: 1px solid black;
+      border: 1px solid #bfbfbf;
       clear: left;
+      font-family: $post-font;
+      text-align: left;
+      .post-text{
+        margin: 10px;
+      }
     }
     .author-date{
-      border: 1px solid black;
       display: inline-block;
       float: right;
+      padding: 5px;
+      font-family: $secondary-font;
     }
     .post-username{
       border: 1px solid black;
+    }
+    .comment-btn-container{
+      height: 30px;
+      margin: 5px 0;
+      .add-comment-btn{
+        box-sizing: border-box;
+        float: right;
+        height: 30px;
+        width: 130px;
+        border: 1px solid black;
+        border-radius: 2px;
+        background-color: $button-color;
+        box-shadow: $shadow;
+        cursor: pointer;
+        &:hover{
+          background-color: $btn-hover-color;
+        }
+        &:active{
+          background-color: $btn-active-color;
+        }
+        .add-comment-btn-text{
+          margin: 0;
+          line-height: 30px;
+          color: white;
+          font-family: $secondary-font;
+        }
+      }
     }
   }
 }

@@ -2,16 +2,25 @@
 <div class="post-container">
   <% @posts.reverse[0..9].each do |post| %>
     <div class="single-post-container">
-    <div class="post-title"><h2 class="title-text"><%= post.title %></h2></div>
+    <div class="post-title">
+      <h2 class="title-text"><%= post.title %></h2>
+    </div>
     <div class="author-date">
       <% @users.each do |user| %>
         <% if post.user_id == user.id %>
-          <span class="post-date"><%= post.created_at.strftime('%b %d') %> by <%= user.username %></span>
+          <span class="post-date">Posted <%= post.created_at.strftime('%b %d') %> by <%= user.username %></span>
         <% end %>
       <% end %>
     </div>
-    <div class="post-content"><p><%= post.content %></p></div>
-
+    <div class="post-content">
+      <p class="post-text"><%= post.content %></p>
+    </div>
+    <div class="comment-btn-container">
+      <div class="add-comment-btn">
+        <p class="add-comment-btn-text">add comment</p>
+      </div>
+    </div>
+    <div class="clear"></div>
     </div>
     <!-- add new comment box for each post -->
     <form class="" action="/add_comment" method="post">
