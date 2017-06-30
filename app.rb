@@ -22,8 +22,9 @@ end
 
 
 # ======= ======= USER: PROFILE PAGE ======= ========
-get '/user_profile' do
+get '/user_profile/:id' do
   puts "\n****** user profile ******"
+  @user = User.find(params[:id])
   erb :user_profile
 end
 
@@ -113,17 +114,24 @@ get '/deleteuser/:id' do
   redirect '/'
 end
 
+# ======= ======= ======= USER: DIRECTORY ======= ======= =======
+get '/directory' do
+  puts "\n****** directory ******"
+  puts "params: #{params.inspect}"
+  @users = User.all
+  erb :directory
+end
+
+
+
 # ======= ======= ======= BLOG: POSTS ======= ======= =======
 # ======= ======= BLOG: FEED PAGE ======= =======
 get '/blog_feed' do
   puts "\n******* blog feed page *******"
-  @posts = Post.all.order(created_at: :desc)
+  # @posts = Post.all.order(created_at: :desc)
+  @posts = Post.all
   @users = User.all
-  # @comments = Comment.all
   puts "****** comments: #{@comments.inspect}"
-  # @user = Post.find(params[:user_id]])
-	# @name = @user.username
-  # puts "****** username: #{@name}"
   erb :blog_feed
 end
 

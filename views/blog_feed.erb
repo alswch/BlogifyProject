@@ -1,6 +1,6 @@
 <!-- view/blog_feed.erb -->
 <div class="post-container">
-  <% @posts.each do |post| %>
+  <% @posts.reverse[0..9].each do |post| %>
     <div class="single-post-container">
     <div class="post-title">
       <h2 class="title-text"><%= post.title %></h2>
@@ -24,14 +24,15 @@
     </div>
     <!-- add new comment box for each post -->
     <form class="" action="/add_comment" method="post">
-    <input type="text" name="text" maxlength="150" placeholder="Write comment...">
-    <input type="hidden" name="post_id" id="current_post_id" value="<%= post.id %>">
-    <input type="submit" name="submit_comment" value="Submit">
+      <input type="text" name="text" maxlength="150" placeholder="Write comment...">
+      <input type="hidden" name="post_id" id="current_post_id" value="<%= post.id %>">
+      <input type="submit" name="submit_comment" value="Submit">
     </form>
     <div>
       <% @comments = Comment.where(post_id: post.id) %>
         <% @comments.each do |comment| %>
             <div class="post-title"><p><%= comment.text %></p></div>
+            <div class="post-title"><p><%= comment.created_at.strftime('%m/%e %l:%M %p') %></p></div>
         <% end %>
     </div>
   <% end %>
