@@ -145,9 +145,9 @@
   .post-container .post-input-item {
     box-sizing: border-box;
     padding: 20px;
-    margin: 5px;
+    margin: 15px;
     height: 150px;
-    border: none;
+    border: 1px solid #bfbfbf;
     border-radius: 2px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     font-size: 26px;

@@ -32,9 +32,9 @@ $post-header-font: 'Oregano', cursive;
   .post-input-item{
     box-sizing: border-box;
     padding: 20px;
-    margin: 5px;
+    margin: 15px;
     height: 150px;
-    border: none;
+    border: 1px solid #bfbfbf;
     border-radius: 2px;
     box-shadow: $shadow;
     font-size: $font-size;
