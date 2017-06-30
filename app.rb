@@ -57,7 +57,7 @@ post '/signin' do
 	if @user
 		if @user.password == params[:password]
 			session[:user_id] = @user.id
-            @current_user = get_current_user
+        @current_user = get_current_user
 			flash[:notice] = "You've been signed in successfully."
 			redirect '/blog_feed'
 		else
@@ -119,6 +119,7 @@ get '/blog_feed' do
   puts "\n******* blog feed page *******"
   @posts = Post.all.order(created_at: :desc)
   @users = User.all
+  @comments = Comment.all
   # @user = Post.find(params[:user_id]])
 	# @name = @user.username
   # puts "****** username: #{@name}"
@@ -143,3 +144,11 @@ post '/create_new_post' do
 end
 
 # ======= ======= BLOG: ADD COMMENT ======= =======
+post '/add_comment' do
+  puts "\n******* add new comment *******"
+  Comment.create(
+  text: params[:text]
+  user_id: session[:user_id]
+  )
+  redirect '/blog_feed'
+end
