@@ -131,7 +131,6 @@ get '/directory' do
 end
 
 
-
 # ======= ======= ======= BLOG: POSTS ======= ======= =======
 # ======= ======= BLOG: FEED PAGE ======= =======
 get '/blog_feed' do

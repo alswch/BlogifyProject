@@ -27,22 +27,20 @@
                   <p  class="single-comment-text"><%= comment.text %></p>
                   <div class="commenter-date-container">
                     <p class="commenter-date">By USERNAME on <%= comment.created_at.strftime('%m/%e %l:%M %p') %>
-                    </p></div>
+                    </p>
+                  </div>
                 </div>
-
               </div>
             <% end %>
         </div>
-
-          <form class="comment-form" action="/add_comment" method="post">
-            <textarea class="comment-form-input" type="text" name="text" maxlength="150" placeholder="Write comment..."></textarea>
-            <input type="hidden" name="post_id" id="current_post_id" value="<%= post.id %>">
-            <div class="comment-button-container">
-              <button class="comment-form-btn cancel-comment-btn" type="button">Cancel</button>
-              <input class="comment-form-btn submit-comment-btn" type="submit" name="submit_comment" value="Submit">
-            </div>
-          </form>
-
+        <form class="comment-form" action="/add_comment" method="post">
+          <textarea class="comment-form-input" type="text" name="text" maxlength="150" placeholder="Write comment..."></textarea>
+          <input type="hidden" name="post_id" id="current_post_id" value="<%= post.id %>">
+          <div class="comment-button-container">
+            <button class="comment-form-btn cancel-comment-btn" type="button">Cancel</button>
+            <input class="comment-form-btn submit-comment-btn" type="submit" name="submit_comment" value="Submit">
+          </div>
+        </form>
       </div>
     </div>
   <% end %>
