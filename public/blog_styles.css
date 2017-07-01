@@ -199,7 +199,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     border: 1px solid black;
     border-radius: 2px;
-    padding: 5px 10px;
+    padding: 5px 10px 10px 10px;
     margin: 20px; }
     .post-container .single-post-container .post-title {
       float: left; }
@@ -220,8 +220,6 @@
       float: right;
       padding: 10px;
       font-family: "Josefin Sans", sans-serif; }
-    .post-container .single-post-container .post-username {
-      border: 1px solid black; }
     .post-container .single-post-container .comment-btn-container {
       height: 30px;
       margin: 5px 0; }
@@ -244,6 +242,69 @@
           line-height: 30px;
           color: white;
           font-family: "Josefin Sans", sans-serif; }
+    .post-container .single-post-container .comment-area .comment-form {
+      height: 70px;
+      padding: 5px 0; }
+      .post-container .single-post-container .comment-area .comment-form .comment-form-input {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 5px;
+        height: 45px;
+        width: 99.5%;
+        outline: none;
+        resize: none;
+        border-radius: 2px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        font-family: "Open Sans", sans-serif; }
+      .post-container .single-post-container .comment-area .comment-form .comment-button-container .comment-form-btn {
+        box-sizing: border-box;
+        float: right;
+        display: inline-block;
+        height: 20px;
+        width: 70px;
+        padding: 5px;
+        border: 1px solid black;
+        border-radius: 2px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        color: white;
+        cursor: pointer;
+        font-family: "Josefin Sans", sans-serif; }
+      .post-container .single-post-container .comment-area .comment-form .comment-button-container .submit-comment-btn {
+        background-color: #3333ff;
+        margin: 0 5px; }
+        .post-container .single-post-container .comment-area .comment-form .comment-button-container .submit-comment-btn:hover {
+          background-color: #6666ff; }
+        .post-container .single-post-container .comment-area .comment-form .comment-button-container .submit-comment-btn:active {
+          background-color: #0000cc; }
+      .post-container .single-post-container .comment-area .comment-form .comment-button-container .cancel-comment-btn {
+        background-color: #ff3333; }
+        .post-container .single-post-container .comment-area .comment-form .comment-button-container .cancel-comment-btn:hover {
+          background-color: #ff6666; }
+        .post-container .single-post-container .comment-area .comment-form .comment-button-container .cancel-comment-btn:active {
+          background-color: #e60000; }
+    .post-container .single-post-container .comment-area .comment-display {
+      padding: 5px 0; }
+      .post-container .single-post-container .comment-area .comment-display .single-comment-container {
+        height: 60px;
+        width: 100%;
+        maring: 5px;
+        border-top: 1px solid gray; }
+        .post-container .single-post-container .comment-area .comment-display .single-comment-container .comment-text-conatiner {
+          height: 45px;
+          padding: 5px;
+          text-align: left; }
+          .post-container .single-post-container .comment-area .comment-display .single-comment-container .comment-text-conatiner .single-comment-text {
+            margin: 0;
+            height: 30px;
+            font-family: "Open Sans", sans-serif;
+            font-size: 12px; }
+          .post-container .single-post-container .comment-area .comment-display .single-comment-container .comment-text-conatiner .commenter-date-container {
+            display: inline-block;
+            float: right; }
+            .post-container .single-post-container .comment-area .comment-display .single-comment-container .comment-text-conatiner .commenter-date-container .commenter-date {
+              margin: 0;
+              font-family: "Josefin Sans", sans-serif;
+              font-size: 12px; }
   .post-container #directory-user-title {
     font-family: "Comfortaa", cursive;
     font-size: 36px; }

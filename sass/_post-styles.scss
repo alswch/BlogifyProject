@@ -73,7 +73,7 @@ $post-header-font: 'Oregano', cursive;
     box-shadow: $shadow;
     border: 1px solid black;
     border-radius: 2px;
-    padding: 5px 10px;
+    padding: 5px 10px 10px 10px;
     margin: 20px;
     .post-title{
       float: left;
@@ -99,9 +99,6 @@ $post-header-font: 'Oregano', cursive;
       padding: 10px;
       font-family: $secondary-font;
     }
-    .post-username{
-      border: 1px solid black;
-    }
     .comment-btn-container{
       height: 30px;
       margin: 5px 0;
@@ -126,6 +123,88 @@ $post-header-font: 'Oregano', cursive;
           line-height: 30px;
           color: white;
           font-family: $secondary-font;
+        }
+      }
+    }
+    .comment-area{
+      .comment-form{
+        height: 70px;
+        padding: 5px 0;
+        .comment-form-input{
+          box-sizing: border-box;
+          margin: 0;
+          padding: 5px;
+          height: 45px;
+          width: 99.5%;
+          outline: none;
+          resize: none;
+          border-radius: 2px;
+          box-shadow: $shadow;
+          font-family: $post-font;
+        }
+        .comment-button-container{
+          .comment-form-btn{
+            box-sizing: border-box;
+            float: right;
+            display: inline-block;
+            height: 20px;
+            width: 70px;
+            padding: 5px;
+            border: 1px solid black;
+            border-radius: 2px;
+            box-shadow: $shadow;
+            color: white;
+            cursor: pointer;
+            font-family: $secondary-font;
+          }
+          .submit-comment-btn{
+            background-color: $button-color;
+            margin: 0 5px;
+            &:hover{
+              background-color: $btn-hover-color;
+            }
+            &:active{
+              background-color: $btn-active-color;
+            }
+          }
+          .cancel-comment-btn{
+            background-color: $delete-btn;
+            &:hover{
+              background-color: $delete-btn-hover;
+            }
+            &:active{
+              background-color: $delete-btn-active;
+            }
+          }
+        }
+      }
+      .comment-display{
+        padding: 5px 0;
+        .single-comment-container{
+          height: 60px;
+          width: 100%;
+          maring: 5px;
+          border-top: 1px solid gray;
+          .comment-text-conatiner{
+            height: 45px;
+            padding: 5px;
+            text-align: left;
+            .single-comment-text{
+              margin: 0;
+              height: 30px;
+              font-family: $post-font;
+              font-size: 12px;
+            }
+            .commenter-date-container{
+              display: inline-block;
+              float: right;
+              .commenter-date{
+                margin: 0;
+                font-family: $secondary-font;
+                font-size: 12px;
+              }
+            }
+          }
         }
       }
     }
