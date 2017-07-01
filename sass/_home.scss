@@ -1,0 +1,21 @@
+$post-font: 'Open Sans', sans-serif;
+$post-header-font: 'Oregano', cursive;
+
+#home-container{
+  box-sizing: border-box;
+  padding: 20px;
+  height: auto;
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  h1{
+    font-family: $post-header-font;
+    font-style: italic;
+  }
+  h3{
+    font-family: $post-font;
+    span{
+      font-style: italic;
+    }
+  }
+}

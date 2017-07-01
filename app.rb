@@ -13,11 +13,19 @@ enable :sessions
 # ======= home =======
 get '/' do
 	puts "\n******* home *******"
+	if session[:user_id]
+		redirect '/blog_feed'
+	else
 	erb :home
+end
 end
 get '/home' do
 	puts "\n******* home *******"
+	if session[:user_id]
+		redirect '/blog_feed'
+	else
 	erb :home
+end
 end
 
 

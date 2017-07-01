@@ -64,6 +64,21 @@
     #footer #github-icon:active {
       background-color: #0000cc; }
 
+#home-container {
+  box-sizing: border-box;
+  padding: 20px;
+  height: auto;
+  width: 400px;
+  margin: auto;
+  text-align: center; }
+  #home-container h1 {
+    font-family: "Oregano", cursive;
+    font-style: italic; }
+  #home-container h3 {
+    font-family: "Open Sans", sans-serif; }
+    #home-container h3 span {
+      font-style: italic; }
+
 #form-container {
   box-sizing: border-box;
   padding: 20px;
