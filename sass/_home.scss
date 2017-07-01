@@ -5,15 +5,17 @@ $post-header-font: 'Oregano', cursive;
   box-sizing: border-box;
   padding: 20px;
   height: auto;
-  width: 400px;
+  width: 500px;
   margin: auto;
   text-align: center;
   h1{
     font-family: $post-header-font;
     font-style: italic;
+    font-size: 50px;
   }
   h3{
     font-family: $post-font;
+    font-size: 20px;
     span{
       font-style: italic;
     }

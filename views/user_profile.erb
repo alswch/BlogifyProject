@@ -1,13 +1,16 @@
-<!-- views/user_profile.erb -->
-<h1>User Profile page</h1>
-
-<% if flash[:notice] %>
-        <h2><%= flash[:notice] %></h2>
-<%end%>
-
-<div id="account_details">
-    <p>Account Details</p>
-    <p> Userame: <%= @user[:username] %> </p>
-    <p> First Name: <%= @user[:firstname] %> </p>
-    <p> Last Name: <%= @user[:lastname] %> </p>
+<div class="post-container">
+  <h1 id="create-post-header">User Detail</h1>
 </div>
+
+<div class="post-container">
+    <h1 id="directory-user-title"> <%= @user[:username] %> </h1>
+    <p id="directory-first-last">
+      <%= @user[:firstname] %>
+      <%= @user[:lastname] %>
+    </p>
+</div>
+
+<!-- <div <div class="post-container">
+  show posts according to profile here.
+  show all comments associated with post.
+</div> -->

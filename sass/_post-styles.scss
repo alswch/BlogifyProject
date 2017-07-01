@@ -130,4 +130,13 @@ $post-header-font: 'Oregano', cursive;
       }
     }
   }
+  #directory-user-title{
+    font-family: $logo-font;
+    font-size: 36px;
+  }
+  #directory-first-last{
+    font-family: $post-font;
+    font-size: 26px;
+  }
+
 }

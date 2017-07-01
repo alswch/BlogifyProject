@@ -68,14 +68,16 @@
   box-sizing: border-box;
   padding: 20px;
   height: auto;
-  width: 400px;
+  width: 500px;
   margin: auto;
   text-align: center; }
   #home-container h1 {
     font-family: "Oregano", cursive;
-    font-style: italic; }
+    font-style: italic;
+    font-size: 50px; }
   #home-container h3 {
-    font-family: "Open Sans", sans-serif; }
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px; }
     #home-container h3 span {
       font-style: italic; }
 
@@ -242,6 +244,12 @@
           line-height: 30px;
           color: white;
           font-family: "Josefin Sans", sans-serif; }
+  .post-container #directory-user-title {
+    font-family: "Comfortaa", cursive;
+    font-size: 36px; }
+  .post-container #directory-first-last {
+    font-family: "Open Sans", sans-serif;
+    font-size: 26px; }
 
 #user-directory-container {
   box-sizing: border-box;
