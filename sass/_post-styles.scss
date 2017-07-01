@@ -99,30 +99,17 @@ $post-header-font: 'Oregano', cursive;
       padding: 10px;
       font-family: $secondary-font;
     }
-    .comment-btn-container{
-      height: 30px;
-      margin: 5px 0;
-      .add-comment-btn{
-        box-sizing: border-box;
-        float: right;
-        height: 30px;
-        width: 130px;
-        border: 1px solid black;
-        border-radius: 2px;
-        background-color: $button-color;
-        box-shadow: $shadow;
-        cursor: pointer;
-        &:hover{
-          background-color: $btn-hover-color;
-        }
-        &:active{
-          background-color: $btn-active-color;
-        }
-        .add-comment-btn-text{
+    .comments-header-container{
+      height: 20px;
+      margin-top: 20px;
+      text-align: left;
+      vertical-align: bottom;
+        .comments-header{
           margin: 0;
-          line-height: 30px;
-          color: white;
+          line-height: 24px;
           font-family: $secondary-font;
+          font-size: 24px;
+          vertical-align: bottom;
         }
       }
     }
@@ -149,6 +136,7 @@ $post-header-font: 'Oregano', cursive;
             display: inline-block;
             height: 20px;
             width: 70px;
+            margin: 3px 1px;
             padding: 5px;
             border: 1px solid black;
             border-radius: 2px;
@@ -159,7 +147,7 @@ $post-header-font: 'Oregano', cursive;
           }
           .submit-comment-btn{
             background-color: $button-color;
-            margin: 0 5px;
+            margin: 3px;
             &:hover{
               background-color: $btn-hover-color;
             }
@@ -217,5 +205,3 @@ $post-header-font: 'Oregano', cursive;
     font-family: $post-font;
     font-size: 26px;
   }
-
-}
