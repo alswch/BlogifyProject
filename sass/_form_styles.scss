@@ -38,6 +38,7 @@ $delete-btn-active: #e60000;
     background-color: $button-color;
     box-shadow: $shadow;
     color: white;
+    outline: none;
     cursor: pointer;
     &:hover{
       background-color: $btn-hover-color;

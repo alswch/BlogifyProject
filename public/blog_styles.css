@@ -108,6 +108,7 @@
     background-color: #3333ff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     color: white;
+    outline: none;
     cursor: pointer; }
     #form-container .submit-btn:hover, #form-container a .delete-btn:hover {
       background-color: #6666ff; }
