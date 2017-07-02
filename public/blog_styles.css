@@ -232,6 +232,8 @@
         font-family: "Josefin Sans", sans-serif;
         font-size: 24px;
         vertical-align: bottom; }
+      .post-container .single-post-container .comments-header-container #comment-toggle {
+        float: right; }
   .post-container .comment-area .comment-form {
     height: 70px;
     padding: 5px 0; }

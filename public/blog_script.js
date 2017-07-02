@@ -22,4 +22,12 @@ $(document).ready(function($) {
       }
     }
   });
+
+  $('#new-post-submit').on('click', function(){
+    if ($('.new-post-input').val() == ""){
+      alert('You must provide a title and body content to post.');
+      return false
+    }
+  });
+
 });
