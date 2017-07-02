@@ -138,10 +138,11 @@ $post-header-font: 'Oregano', cursive;
             width: 70px;
             margin: 3px 1px;
             padding: 5px;
-            border: 1px solid black;
+            border: none;
             border-radius: 2px;
             box-shadow: $shadow;
             color: white;
+            outline: none;
             cursor: pointer;
             font-family: $secondary-font;
           }

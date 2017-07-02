@@ -254,10 +254,11 @@
       width: 70px;
       margin: 3px 1px;
       padding: 5px;
-      border: 1px solid black;
+      border: none;
       border-radius: 2px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       color: white;
+      outline: none;
       cursor: pointer;
       font-family: "Josefin Sans", sans-serif; }
     .post-container .comment-area .comment-form .comment-button-container .submit-comment-btn {
