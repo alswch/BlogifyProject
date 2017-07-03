@@ -1,9 +1,14 @@
 @import 'navbar';
 @import 'footer';
+@import 'home';
 @import 'form_styles';
 @import 'post-styles';
+@import 'directory';
 
 
 body{
   margin: 0;
+  #yield-container{
+    padding-bottom: 60px;
+  }
 }

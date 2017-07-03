@@ -13,11 +13,19 @@ enable :sessions
 # ======= home =======
 get '/' do
 	puts "\n******* home *******"
+	if session[:user_id]
+		redirect '/blog_feed'
+	else
 	erb :home
+	end
 end
 get '/home' do
 	puts "\n******* home *******"
+	if session[:user_id]
+		redirect '/blog_feed'
+	else
 	erb :home
+	end
 end
 
 
@@ -25,6 +33,7 @@ end
 get '/user_profile/:id' do
   puts "\n****** user profile ******"
   @user = User.find(params[:id])
+	@posts = Post.where(user_id: @user.id)
   erb :user_profile
 end
 
@@ -121,7 +130,6 @@ get '/directory' do
   @users = User.all
   erb :directory
 end
-
 
 
 # ======= ======= ======= BLOG: POSTS ======= ======= =======

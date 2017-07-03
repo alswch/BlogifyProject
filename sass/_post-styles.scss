@@ -1,16 +1,15 @@
 $font-size: 26px;
-$post-font: 'Open Sans', sans-serif;
 $post-header-font: 'Oregano', cursive;
 
 .post-container{
   box-sizing: border-box;
-  padding: 20px;
+  padding: 0 20px;
   height: auto;
   width: 700px;
   margin: auto;
   text-align: center;
   #create-post-header{
-    margin: 0;
+    margin: 10px;
     font-family: $post-header-font;
     font-style: italic;
   }
@@ -32,9 +31,9 @@ $post-header-font: 'Oregano', cursive;
   .post-input-item{
     box-sizing: border-box;
     padding: 20px;
-    margin: 5px;
+    margin: 15px;
     height: 150px;
-    border: none;
+    border: 1px solid #bfbfbf;
     border-radius: 2px;
     box-shadow: $shadow;
     font-size: $font-size;
@@ -74,8 +73,9 @@ $post-header-font: 'Oregano', cursive;
     box-shadow: $shadow;
     border: 1px solid black;
     border-radius: 2px;
-    padding: 5px 10px;
+    padding: 5px 10px 10px 10px;
     margin: 20px;
+    background-color: #e6f2ff;
     .post-title{
       float: left;
       .title-text{
@@ -86,6 +86,7 @@ $post-header-font: 'Oregano', cursive;
     }
     .post-content{
       border: 1px solid #bfbfbf;
+      border-radius: 2px;
       clear: left;
       font-family: $post-font;
       text-align: left;
@@ -96,38 +97,116 @@ $post-header-font: 'Oregano', cursive;
     .author-date{
       display: inline-block;
       float: right;
-      padding: 5px;
+      padding: 10px;
       font-family: $secondary-font;
     }
-    .post-username{
-      border: 1px solid black;
-    }
-    .comment-btn-container{
-      height: 30px;
-      margin: 5px 0;
-      .add-comment-btn{
-        box-sizing: border-box;
-        float: right;
-        height: 30px;
-        width: 130px;
-        border: 1px solid black;
-        border-radius: 2px;
-        background-color: $button-color;
-        box-shadow: $shadow;
-        cursor: pointer;
-        &:hover{
-          background-color: $btn-hover-color;
-        }
-        &:active{
-          background-color: $btn-active-color;
-        }
-        .add-comment-btn-text{
+    .comments-header-container{
+      height: 20px;
+      margin-top: 20px;
+      text-align: left;
+      vertical-align: bottom;
+        .comments-header{
           margin: 0;
-          line-height: 30px;
-          color: white;
+          line-height: 24px;
           font-family: $secondary-font;
+          font-size: 24px;
+          vertical-align: bottom;
+        }
+        #comment-toggle{
+          float: right;
+        }
+      }
+    }
+    .comment-area{
+      .comment-form{
+        height: 70px;
+        padding: 5px 0;
+        .comment-form-input{
+          box-sizing: border-box;
+          margin: 0;
+          padding: 5px;
+          height: 45px;
+          width: 99.5%;
+          outline: none;
+          resize: none;
+          border-radius: 2px;
+          box-shadow: $shadow;
+          font-family: $post-font;
+        }
+        .comment-button-container{
+          .comment-form-btn{
+            box-sizing: border-box;
+            float: right;
+            display: inline-block;
+            height: 20px;
+            width: 70px;
+            margin: 3px 1px;
+            padding: 5px;
+            border: none;
+            border-radius: 2px;
+            box-shadow: $shadow;
+            color: white;
+            outline: none;
+            cursor: pointer;
+            font-family: $secondary-font;
+          }
+          .submit-comment-btn{
+            background-color: $button-color;
+            margin: 3px;
+            &:hover{
+              background-color: $btn-hover-color;
+            }
+            &:active{
+              background-color: $btn-active-color;
+            }
+          }
+          .cancel-comment-btn{
+            background-color: $delete-btn;
+            &:hover{
+              background-color: $delete-btn-hover;
+            }
+            &:active{
+              background-color: $delete-btn-active;
+            }
+          }
+        }
+      }
+      .comment-display{
+        padding: 5px 0;
+        .single-comment-container{
+          height: 60px;
+          width: 100%;
+          margin: 5px;
+          border-top: 1px solid gray;
+          .comment-text-conatiner{
+            height: 45px;
+            padding: 5px;
+            text-align: left;
+            .single-comment-text{
+              margin: 0;
+              height: 30px;
+              font-family: $post-font;
+              font-size: 12px;
+            }
+            .commenter-date-container{
+              display: inline-block;
+              float: right;
+              .commenter-date{
+                margin: 0;
+                font-family: $secondary-font;
+                font-size: 12px;
+              }
+            }
+          }
         }
       }
     }
   }
-}
+  #directory-user-title{
+    font-family: $logo-font;
+    font-size: 36px;
+  }
+  #directory-first-last{
+    font-family: $post-font;
+    font-size: 26px;
+  }

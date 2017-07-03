@@ -1,11 +1,19 @@
 <!-- ======= views/directory.erb ======= -->
-<h1>Directory</h1>
+<div class="post-container">
+  <h1 id="create-post-header">So many users, so little time...</h1>
+</div>
 
 <% puts "\n******* do loop (each_with_index) *******" %>
-<div id="users_list">
-    <% @users.each_with_index do |user, index| %>
-        <% puts "** user/index: #{user}: #{index}" %>
-        <!-- <p> <%= user[:username] %> </p> -->
-        <p> <a href="/user_profile/<%= user[:id] %>"> <%= user[:username] %> </a></p>
-    <%end%>
+<div id="user-directory-container">
+  <% @users.each_with_index do |user, index| %>
+    <% puts "** user/index: #{user}: #{index}" %>
+    <!-- <p> <%= user[:username] %> </p> -->
+    <a href="/user_profile/<%= user[:id] %>">
+      <div class="user-directory-item">
+          <span>
+            <%= user[:username] %>
+          </span>
+      </div>
+    </a>
+  <%end%>
 </div>
