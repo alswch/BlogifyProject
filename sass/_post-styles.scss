@@ -3,13 +3,13 @@ $post-header-font: 'Oregano', cursive;
 
 .post-container{
   box-sizing: border-box;
-  padding: 20px;
+  padding: 0 20px;
   height: auto;
   width: 700px;
   margin: auto;
   text-align: center;
   #create-post-header{
-    margin: 0;
+    margin: 10px;
     font-family: $post-header-font;
     font-style: italic;
   }
@@ -75,6 +75,7 @@ $post-header-font: 'Oregano', cursive;
     border-radius: 2px;
     padding: 5px 10px 10px 10px;
     margin: 20px;
+    background-color: #e6f2ff;
     .post-title{
       float: left;
       .title-text{

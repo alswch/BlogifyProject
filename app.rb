@@ -17,7 +17,7 @@ get '/' do
 		redirect '/blog_feed'
 	else
 	erb :home
-end
+	end
 end
 get '/home' do
 	puts "\n******* home *******"
@@ -25,7 +25,7 @@ get '/home' do
 		redirect '/blog_feed'
 	else
 	erb :home
-end
+	end
 end
 
 
@@ -33,6 +33,7 @@ end
 get '/user_profile/:id' do
   puts "\n****** user profile ******"
   @user = User.find(params[:id])
+	@posts = Post.where(user_id: @user.id)
   erb :user_profile
 end
 

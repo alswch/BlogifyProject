@@ -138,13 +138,13 @@
 
 .post-container {
   box-sizing: border-box;
-  padding: 20px;
+  padding: 0 20px;
   height: auto;
   width: 700px;
   margin: auto;
   text-align: center; }
   .post-container #create-post-header {
-    margin: 0;
+    margin: 10px;
     font-family: "Oregano", cursive;
     font-style: italic; }
   .post-container .title-input-item {
@@ -201,7 +201,8 @@
     border: 1px solid black;
     border-radius: 2px;
     padding: 5px 10px 10px 10px;
-    margin: 20px; }
+    margin: 20px;
+    background-color: #e6f2ff; }
     .post-container .single-post-container .post-title {
       float: left; }
       .post-container .single-post-container .post-title .title-text {

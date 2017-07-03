@@ -10,7 +10,48 @@
     </p>
 </div>
 
-<!-- <div <div class="post-container">
-  show posts according to profile here.
-  show all comments associated with post.
-</div> -->
+
+
+<div class="post-container">
+  <div class="single-post-container">
+    <% @posts.each do |post| %>
+      <div class="post-title">
+        <h2 class="title-text"><%= post.title %></h2>
+      </div>
+      <div class="author-date">
+        <span class="post-date">Posted <%= post.created_at.strftime('%b %d') %> by <%= @user.username %></span>
+      </div>
+      <div class="post-content">
+        <p class="post-text"><%= post.content %></p>
+      </div>
+      <div class="comments-header-container">
+        <!-- <button id="comment-toggle" type="button">show comments</button> -->
+        <p class="comments-header">Comments</p>
+      </div>
+      <div class="comment-area">
+        <div class="comment-display">
+          <% @comments = Comment.where(post_id: post.id) %>
+            <% @comments.each do |comment| %>
+              <div class="single-comment-container">
+                <div class="comment-text-conatiner">
+                  <p  class="single-comment-text"><%= comment.text %></p>
+                  <div class="commenter-date-container">
+                    <p class="commenter-date">By USERNAME on <%= comment.created_at.strftime('%m/%e %l:%M %p') %>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+        </div>
+        <form class="comment-form" action="/add_comment" method="post">
+          <textarea class="comment-form-input" type="text" name="text" maxlength="150" placeholder="Write comment..."></textarea>
+          <input type="hidden" name="post_id" id="current_post_id" value="<%= post.id %>">
+          <div class="comment-button-container">
+            <!-- <button class="comment-form-btn cancel-comment-btn" type="button">hhow comments</button> -->
+            <input class="comment-form-btn submit-comment-btn" type="submit" name="submit_comment" value="submit">
+          </div>
+        </form>
+      </div>
+    <% end %>
+  </div>
+</div>
